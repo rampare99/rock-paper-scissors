@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    const computerPlay = () => {
+        let random = Math.floor(Math.random() * 3) + 1;
+        let choice = '';
+        if (random === 1) {
+            choice = 'ROCK';
+        } else if (random === 2) {
+            choice = 'PAPER';
+        } else {
+            choice = 'SCISSORS';
+        }
+        return(choice);
+    }
+
+    const rockPaperScissors = (playerChoice, computerChoice) => {
+        const player = playerChoice.toUpperCase();
+        const cpu = computerChoice.toUpperCase();
+
+        if (player === 'ROCK') {
+            if (cpu === 'ROCK') {
+                console.log('Draw! Both players chose Rock.')
+                return 'DRAW';
+            } else if (cpu === 'PAPER') {
+                console.log('You lose! Paper beats Rock.')
+                return 'LOSE';
+            } else if (cpu === 'SCISSORS') {
+                console.log('You win! Rock beats Scissors.')
+                return 'WIN';
+            }
+        } else if (player === 'PAPER') {
+            if (cpu === 'ROCK') {
+                console.log('You win! Paper beats Rock.')
+                return 'WIN';
+            } else if (cpu === 'PAPER') {
+                console.log('Draw! Both players chose Paper.')
+                return 'DRAW';
+            } else if (cpu === 'SCISSORS') {
+                console.log('You lose! Scissors beats Paper.')
+                return 'LOSE';
+            }
+        } else if (player === 'SCISSORS') {
+            if (cpu === 'ROCK') {
+                console.log('You lose! Rock beats Scissors.')
+                return 'LOSE';
+            } else if (cpu === 'PAPER') {
+                console.log('You win! Scissors beats Paper.')
+                return 'WIN';
+            } else if (cpu === 'SCISSORS') {
+                console.log('Draw! Both players chose Scissors.')
+                return 'DRAW';
+            }
+        } else {
+            console.log('Please enter a valid option.')
+            rockPaperScissors(prompt('Choose between Rock, Paper and Scissors.'), computerChoice);
+        }
+    }
+
+    const game = () => {
+        let playerPoints = 0;
+        let computerPoints = 0;
+
+        for (let i = 0; i < 5; i++) {
+            let result = rockPaperScissors(prompt('Choose between Rock, Paper and Scissors.'), computerPlay());
+            if (result === 'WIN') {
+                playerPoints++;
+                console.log(`You: ${playerPoints}`)
+                console.log(`CPU: ${computerPoints}`)
+            } else if (result === 'LOSE') {
+                computerPoints++;
+                console.log(`You: ${playerPoints}`)
+                console.log(`CPU: ${computerPoints}`)
+            } else if (result === 'DRAW') {
+                console.log(`You: ${playerPoints}`)
+                console.log(`CPU: ${computerPoints}`)
+            }
+        }
+
+        if (playerPoints === computerPoints) {
+            console.log('Final result: DRAW!');
+        } else if (playerPoints > computerPoints) {
+            console.log('Final result: YOU WIN!');
+        } else {
+            console.log('Final result: YOU LOSE!')
+        };
+    }
+
+    game();
+  </script>
+</body>
+</html>
