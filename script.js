@@ -17,35 +17,26 @@ const rockPaperScissors = (playerChoice, computerChoice) => {
 
   if (player === "ROCK") {
     if (cpu === "ROCK") {
-      console.log("Draw! Both players chose Rock.");
       return ['DRAW', "ROCK"];
     } else if (cpu === "PAPER") {
-      console.log("You lose! Paper beats Rock.");
       return ["LOSE", "ROCK", "PAPER"];
     } else if (cpu === "SCISSORS") {
-      console.log("You win! Rock beats Scissors.");
       return ["WIN", "ROCK", "SCISSORS"];
     }
   } else if (player === "PAPER") {
     if (cpu === "ROCK") {
-      console.log("You win! Paper beats Rock.");
       return ["WIN", "PAPER", "ROCK"];
     } else if (cpu === "PAPER") {
-      console.log("Draw! Both players chose Paper.");
       return ["DRAW", "PAPER"];
     } else if (cpu === "SCISSORS") {
-      console.log("You lose! Scissors beats Paper.");
       return ["LOSE", "PAPER", "SCISSORS"];
     }
   } else if (player === "SCISSORS") {
     if (cpu === "ROCK") {
-      console.log("You lose! Rock beats Scissors.");
       return ["LOSE", "SCISSORS", "ROCK"];
     } else if (cpu === "PAPER") {
-      console.log("You win! Scissors beats Paper.");
       return ["WIN", "SCISSORS", "PAPER"];
     } else if (cpu === "SCISSORS") {
-      console.log("Draw! Both players chose Scissors.");
       return ["DRAW", "SCISSORS"];
     }
   }
