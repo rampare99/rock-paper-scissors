@@ -98,15 +98,15 @@ h1 {
 
 @media only screen and (max-width: 700px) {
   #container {
-    height: 80%;
+    height: 90%;
   }
 
   #title-choices {
-    height: 25%;
+    height: 30%;
   }
 
   #results {
-    height: 75%;
+    height: 70%;
   }
 
   h1 {
@@ -126,6 +126,6 @@ h1 {
   }
 
   #results {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
