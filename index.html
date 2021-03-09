@@ -3,24 +3,26 @@
   <head>
     <title>Rock, Paper, Scissors</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <div id="container">
-      <h1>Rock, Paper, Scissors</h1>
-      <div id="choices">
-        <button id='rock'>ROCK</button>
-        <button id='paper'>PAPER</button>
-        <button id='scissors'>SCISSORS</button>
+      <div id="title-choices">
+        <h1>Rock, Paper, Scissors</h1>
+        <div id="choices">
+          <button id="rock">ROCK</button>
+          <button id="paper">PAPER</button>
+          <button id="scissors">SCISSORS</button>
+        </div>
       </div>
-      <div id='results'>
-          <p id='gameResult'></p>
-          <ul id='points'>
-              <li id='player'>Player = 0</li>
-              <li id='cpu'>CPU = 0</li>
-          </ul>
-          <p id='winner'></p>
+      <div id="results">
+        <ul id="points">
+          <li id="player">Player = 0</li>
+          <li id="cpu">CPU = 0</li>
+        </ul>
+        <p id="gameResult"></p>
+        <p id="winner"></p>
       </div>
     </div>
     <script src="script.js"></script>

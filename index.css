@@ -17,6 +17,7 @@ body {
   place-items: center;
   padding: calc(var(--space) * 2);
   max-width: 700px;
+  overflow: hidden;
 }
 
 #container {
@@ -97,11 +98,19 @@ h1 {
 
 @media only screen and (max-width: 700px) {
   #container {
-    height: 80%;
+    height: 100%;
+  }
+
+  #title-choices {
+    height: 30%;
+  }
+
+  #results {
+    height: 70%;
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
 
   #rock {
@@ -117,6 +126,6 @@ h1 {
   }
 
   #results {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
