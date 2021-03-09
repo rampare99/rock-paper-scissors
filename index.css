@@ -38,6 +38,12 @@ h1 {
   box-shadow: var(--shadow) 4px 4px;
 }
 
+#rock,
+#paper,
+#scissors {
+  width: 33%;
+}
+
 #choices button {
   flex-grow: 1;
   cursor: pointer;
@@ -114,15 +120,15 @@ h1 {
   }
 
   #rock {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   #paper {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   #scissors {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   #results {
